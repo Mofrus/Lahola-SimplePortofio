@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@microsoft/fast-components": "^2.30.6",
+    "uikit": "^3.18.2-dev.e1f7d3815"
+  }
+}
