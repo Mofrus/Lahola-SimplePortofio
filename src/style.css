@@ -5,6 +5,7 @@ html {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
+  color: white;
 }
 
 .navbar {
@@ -35,92 +36,89 @@ html {
   text-align: center; /* Center text content within the container */
 }
 
-  /* Improve readability with consistent margins */
-  .small-box {
-    border-radius: 5px;
-    color: white;
-    margin: 10px;
-  }
+/* Improve readability with consistent margins */
+.small-box {
+  border-radius: 5px;
+  margin: 10px;
+}
 
-  .small-box p {
-    font-size: 20px;
-    margin: 5px;
-  }
+.small-box p {
+  font-size: 20px;
+  margin: 5px;
+}
 
-  .small-box h1 {
-    font-size: 32px; /* Use a more appropriate size for headings */
-  }
+.small-box h1 {
+  font-size: 32px; /* Use a more appropriate size for headings */
+}
 
-  .right-side {
-    border-radius: 5px;
-    padding: 10px;
-  }
+.right-side {
+  border-radius: 5px;
+  padding: 10px;
+}
 
-  .right-side img {
-    border-radius: 10px;
-    object-fit: cover;
-    max-width: 400px;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
-  }
+.right-side img {
+  border-radius: 10px;
+  object-fit: cover;
+  max-width: 400px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
 
-  /* Responsive adjustments */
+/* Responsive adjustments */
 
-  @media only screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-
-    .home-content h1{
-      font-size: 30px;
-    }
-    .small-box p {
-      font-size: 16px;
-    }
-
-    .right-side img {
-      max-width: 300px;
-    }
-  }
-
-  @media only screen and (max-width: 400px) {
-    .container {
-      font-size: 14px; /* Further reduce font size for very small screens */
-    }
-
-    .small-box h1 {
-      font-size: 24px;
-    }
-
-    .right-side img {
-      max-width: 200px;
-    }
-  }
-
-  .home-section {
-    display: grid;
-    height: 94vh;
-    grid-template-columns: 1fr;
-    place-items: center;
-    box-shadow: inset 0px -100px 100px -20px rgba(0, 0, 0, 1);
-  }
-
-  .home-content {
-    display: flex;
+@media only screen and (max-width: 768px) {
+  .container {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .home-content h1 {
-    font-size: 60px;
-    margin: 5px;
-    color: white;
+    font-size: 30px;
+  }
+  .small-box p {
+    font-size: 16px;
   }
 
-#myVideo {
+  .right-side img {
+    max-width: 300px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    font-size: 14px; /* Further reduce font size for very small screens */
+  }
+
+  .small-box h1 {
+    font-size: 24px;
+  }
+
+  .right-side img {
+    max-width: 200px;
+  }
+}
+
+.home-section {
+  display: grid;
+  height: 94vh;
+  grid-template-columns: 1fr;
+  place-items: center;
+  box-shadow: inset 0px -170px 100px 0px rgb(0, 0, 0);
+}
+
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-content h1 {
+  font-size: 60px;
+  margin: 5px;
+  color: white;
+}
+
+.videoBackground {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover; /* adjust as needed */
@@ -129,46 +127,107 @@ html {
   /* opacity: 0.9; */
 }
 
+#homeVideo {
+  top: 0;
+  left: 0;
+}
+
 .about-section {
-  height: 40vh;
+  height: 100vh;
+  box-shadow: inset 0px 170px 100px 0px rgb(0, 0, 0);
   background-color: black;
 }
 
-.card-image {
-  max-width: 300px;
+.containerA {
+  position: relative; /* Enable positioning for the overlay */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%; /* Adjust width as needed (optional) */
+  top: 25%;
 }
 
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
-
-.card {
-  color: white;
-  background-color: rgb(17, 17, 17);
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(10, 10, 10, 0.1);
+.containerA h1 {
+  position: absolute;
+  font-size: 80px;
+  transform: translate(100%, -65%);
+  margin: 0;
   text-align: center;
-  height: 250px;
-  box-shadow: 0px 0px 20px 0px #353535;
 }
 
-.card h3 {
-  margin-bottom: 10px;
+.overlay {
+  position: absolute;
+  transform: translate(
+    45%,
+    60%
+  ); /* Center the overlay point within the container */
+  width: 400px;
+  height: 60%; /* Adjust height as needed */
+  background-color: rgb(17, 17, 17); /* Replace with your color choice */
 }
 
-@media only screen and (max-width: 768px) {
-  .card-container {
-    flex-direction: column;
+.overlay p {
+  padding: 20px;
+  margin: 0;
+  font-size: 22px;
+  line-height: 35px;
+  text-align: justify;
+}
+
+.containerA img {
+  transform: translate(-35%, 0%);
+}
+
+.containerA,
+.overlay,
+img {
+  border-radius: 8px;
+}
+
+/* Media queries for smaller screens (adjust as needed) */
+@media (max-width: 768px) {
+  .overlay {
+    transform: translate(
+      0%,
+      10%
+    ); /* Center the overlay point within the container */
+    top: 70%;
+  }
+
+  .containerA img {
+    transform: translate(0, 0);
+  }
+
+  .containerA h1 {
+    transform: translate(0%, -185%);
+    text-align: center;
+  }
+
+  .about-section {
+    height: 120vh;
   }
 }
 
-/* 
-#100f10 black
-#4b4c4c grey
-#676567 lighter grey
-#c7c6c5 whitest grey 
-*/
+@media (max-width: 480px) {
+  .containerA img {
+    width: 90%;
+  }
+
+  .overlay {
+    width: 80%;
+    height: 75%;
+  }
+
+  .containerA h1 {
+    transform: translate(0%, -180%);
+    font-size: 70px;
+  }
+
+  .about-section {
+    height: 140vh;
+  }
+
+  .overlay p {
+    font-size: 18px;
+  }
+}
