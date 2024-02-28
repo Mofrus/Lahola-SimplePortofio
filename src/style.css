@@ -12,8 +12,6 @@ html {
   background-color: rgb(17, 17, 17);
   padding: 10px 20px;
   border-radius: 8px;
-  position: sticky;
-  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +19,11 @@ html {
   max-width: 500px; /* Adjust this value for desired width */
   margin: 0 auto; /* Center horizontally */
   margin-top: 16px;
-  transition: top 0.3s;
+  position: absolute;
+
+  /* Centering code */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar a {
@@ -98,7 +100,7 @@ html {
 
 .home-section {
   display: grid;
-  height: 90vh;
+  height: 100vh;
   grid-template-columns: 1fr;
   place-items: center;
   box-shadow: inset 0px -170px 100px 0px rgb(0, 0, 0);
@@ -121,10 +123,9 @@ html {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* adjust as needed */
-  z-index: -1; /* ensures video sits behind content */
+  object-fit: cover;
+  z-index: -1;
   overflow: hidden;
-  /* opacity: 0.9; */
 }
 
 #homeVideo {
@@ -134,16 +135,16 @@ html {
 
 .about-section {
   height: 100vh;
-  box-shadow: inset 0px 170px 100px 0px rgb(0, 0, 0);
+  box-shadow: 0px 0px 30px 61px rgba(0, 0, 0, 0.75);
   background-color: black;
 }
 
 .containerA {
-  position: relative; /* Enable positioning for the overlay */
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  width: 100%; /* Adjust width as needed (optional) */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   top: 25%;
 }
 
@@ -162,7 +163,7 @@ html {
     60%
   ); /* Center the overlay point within the container */
   width: 400px;
-  height: 60%; /* Adjust height as needed */
+  height: 280px; /* Adjust height as needed */
   background-color: rgb(17, 17, 17); /* Replace with your color choice */
 }
 
@@ -170,8 +171,8 @@ html {
   padding: 20px;
   margin: 0;
   font-size: 22px;
-  line-height: 35px;
-  text-align: justify;
+  line-height: 40px;
+  text-align: center;
 }
 
 .containerA img {
@@ -184,13 +185,9 @@ img {
   border-radius: 8px;
 }
 
-/* Media queries for smaller screens (adjust as needed) */
 @media (max-width: 768px) {
   .overlay {
-    transform: translate(
-      0%,
-      10%
-    ); /* Center the overlay point within the container */
+    transform: translate(0%, 10%);
     top: 70%;
   }
 
@@ -215,7 +212,6 @@ img {
 
   .overlay {
     width: 80%;
-    height: 75%;
   }
 
   .containerA h1 {
@@ -223,16 +219,18 @@ img {
     font-size: 70px;
   }
 
-  .about-section {
-    height: 140vh;
-  }
-
   .overlay p {
-    font-size: 18px;
+    font-size: 4.5vw;
+    line-height: 35px;
   }
 }
 
-#contactPage{
+@media (max-width: 375px) {
+  .overlay {
+    height: 250px;
+  }
+}
+#contactPage {
   height: 100vh;
   width: 100%;
   background-color: black;
@@ -240,28 +238,38 @@ img {
 
 .containerContact {
   display: flex;
-  justify-content: center;
-  gap: 60px; /* Adjust gap for desired spacing between divs */
-  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+  gap: 60px;
+  align-items: center;
   height: 100%;
 }
 
+
 .image-text-container {
+  display: flex; /* Enable flexbox layout */
+  justify-content: center; /* Horizontally center items */
+  align-items: center; /* Vertically center items */
+  flex-direction: column;
   text-align: center;
+  background-color: rgb(17, 17, 17);
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
 }
 
 .image-text-container img {
-  width: 200px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 10px; /* Add spacing between image and text */
+  width: 110px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: grayscale(100%);
 }
 
 .image-text-container p {
-  font-weight: bold; /* Adjust font weight as desired */
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
-  .containerContact{
+  .containerContact {
     flex-flow: column;
   }
 }
