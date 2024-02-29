@@ -10,8 +10,8 @@ html {
 
 .navbar {
   background-color: rgb(17, 17, 17);
-  padding: 10px 20px;
-  border-radius: 8px;
+  padding: 20px 50px;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +20,6 @@ html {
   margin: 0 auto; /* Center horizontally */
   margin-top: 16px;
   position: absolute;
-
-  /* Centering code */
   left: 50%;
   transform: translateX(-50%);
 }
@@ -276,12 +274,9 @@ img {
 
 .image-text-container:hover img {
   filter: grayscale(0%); /* Remove grayscale on hover */
-  width: 120px;
 }
 
-.image-text-container:hover {
-  box-shadow: 0px 0px 30px 2px rgba(255, 255, 255, 0.75);
-}
+
 
 .image-text-container p {
   font-weight: bold;
@@ -311,27 +306,30 @@ img {
     width: 100px;
   }
 
-  .image-text-container:hover {
-    box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.75);
-  }
+
 }
 
 .galleryPage {
-  /* Added missing styles */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background-color: black;
+}
+
+.mainWrapper {
+  display: flex; /* Enables flexbox for easy centering */
+  justify-content: center; /* Horizontally center all content */
+  align-items: center; /* Vertically center all content **(already set)** */
+  height: 100%;
+  flex-grow: 1;
 }
 
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  width: 80%; /* Adjusted width to account for margins */
+  width: 80%;
   max-width: 1100px;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
 .box {
@@ -345,6 +343,8 @@ img {
 
 .galleryPage h1 {
   text-align: center;
-  margin: 0 auto;
-  flex-direction: row;
+  margin: 0;
+  font-size: 80px;
+  margin-bottom: 40px;
+  padding-top: 90px;
 }

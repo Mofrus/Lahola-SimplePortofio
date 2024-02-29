@@ -16,14 +16,14 @@
     <main>
       <header>
         <nav class="navbar">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Contact</a>
+          <a href="#home">Home</a>
+          <a href="#About">About</a>
+          <a href="#contactPage">Contact</a>
+          <a href="#gallery">Gallery</a>
         </nav>
       </header>
 
-      <section class="home-section">
+      <section class="home-section" id="home">
         <video class="videoBackground" id="homeVideo" loop muted autoplay>
           <source
             src="/Lahola-SimplePortfolio\images\BackgroundPatternVideoBlured.mp4"
@@ -55,7 +55,7 @@
         </div>
       </section>
 
-      <section class="about-section">
+      <section class="about-section" id="About">
         <div class="containerA">
           <h1>About<br />me</h1>
           <img
@@ -76,73 +76,81 @@
         <div class="containerContact">
           <h1>Contact me</h1>
           <div class="image-text-container">
-            <img
+            <a href="https://youtu.be/fCRCLsJQWUQ?si=31VuqZ4q-5V5ICNY&t=65">
+              <img
               src="\Lahola-SimplePortfolio\images\discord_logo.png"
               alt="Image 1 description"
-            />
+              />
+            </a>
             <p>Discord</p>
           </div>
 
           <div class="image-text-container">
-            <img
+            <a href="https://youtu.be/fCRCLsJQWUQ?si=31VuqZ4q-5V5ICNY&t=65">
+              <img
               src="\Lahola-SimplePortfolio\images\Instagram_icon.png"
               alt="Image 2 description"
             />
+            </a>
             <p>Instagram</p>
           </div>
 
           <div class="image-text-container">
-            <img
+            <a href="https://youtu.be/fCRCLsJQWUQ?si=31VuqZ4q-5V5ICNY&t=65">
+              <img
               src="\Lahola-SimplePortfolio\images\facebook_logo.png"
               alt="Image 3 description"
-            />
+              />
+            </a>
             <p>Facebook</p>
           </div>
         </div>
       </section>
 
-      <section class="galleryPage">
-        <h1 style="">Cat Gallery</h1>
-        <div class="wrapper">
-          <div class="box">
-            <img
-              src="\Lahola-SimplePortfolio\images\sillyCat2.png"
-              alt="Image description"
-            />
-          </div>
-          <div class="box">
-            <img
-              src="\Lahola-SimplePortfolio\images\sillyCat5.jpg"
-              alt="Image description"
-              style="width: 100%"
-            />
-          </div>
-          <div class="box">
-            <img
-              src="\Lahola-SimplePortfolio\images\sillyCat4.jpg"
-              alt="Image description"
-              style="transform: translate(-25%, 0%)"
-            />
-          </div>
-          <div class="box">
-            <img
-              src="\Lahola-SimplePortfolio\images\sillyCat.png"
-              alt="Image description"
-              style="transform: translate(-10%, -30%)"
-            />
-          </div>
-          <div class="box">
-            <img
-              src="\Lahola-SimplePortfolio\images\sillyCat6.png"
-              alt="Image description"
-              style="width: 300px"
-            />
-          </div>
-          <div class="box">
-            <img
-              src="\Lahola-SimplePortfolio\images\sillyCat2.png"
-              alt="Image description"
-            />
+      <section class="galleryPage" id="gallery">
+        <h1>Cat Gallery</h1>
+        <div class="mainWrapper">
+          <div class="wrapper">
+            <div class="box">
+              <img
+                src="\Lahola-SimplePortfolio\images\sillyCat2.png"
+                alt="Image description"
+              />
+            </div>
+            <div class="box">
+              <img
+                src="\Lahola-SimplePortfolio\images\sillyCat5.jpg"
+                alt="Image description"
+                style="width: 100%"
+              />
+            </div>
+            <div class="box">
+              <img
+                src="\Lahola-SimplePortfolio\images\sillyCat4.jpg"
+                alt="Image description"
+                style="transform: translate(-25%, 0%)"
+              />
+            </div>
+            <div class="box">
+              <img
+                src="\Lahola-SimplePortfolio\images\sillyCat.png"
+                alt="Image description"
+                style="transform: translate(-10%, -30%)"
+              />
+            </div>
+            <div class="box">
+              <img
+                src="\Lahola-SimplePortfolio\images\sillyCat6.png"
+                alt="Image description"
+                style="width: 300px"
+              />
+            </div>
+            <div class="box">
+              <img
+                src="\Lahola-SimplePortfolio\images\sillyCat2.png"
+                alt="Image description"
+              />
+            </div>
           </div>
         </div>
       </section>
