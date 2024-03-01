@@ -6,11 +6,12 @@ html {
   font-style: normal;
   font-weight: 400;
   color: white;
+  scroll-behavior: smooth;
 }
 
 .navbar {
   background-color: rgb(17, 17, 17);
-  padding: 20px 50px;
+  padding: 20px 20px;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -28,6 +29,7 @@ html {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .container {
